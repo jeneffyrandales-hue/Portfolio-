@@ -99,3 +99,21 @@ blockquote { font-family: var(--serif); font-size: clamp(1.2rem, 2.4vw, 1.65rem)
 }
 @media (max-width: 420px) { .brand { font-size: .91rem; }.traits-grid, .skills-grid { grid-template-columns: 1fr; }.memory-grid { gap: 10px; }.memory-placeholder { min-height: 125px; }.filter { font-size: .78rem; padding: 8px 11px; }.poem-card { padding: 25px 18px; }.hero-art { min-height: 280px; } }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; } }
+.profile-placeholder {
+  width: 180px !important;
+  height: 180px !important;
+  max-width: 180px !important;
+  max-height: 180px !important;
+  border-radius: 50% !important;
+  overflow: hidden !important;
+  margin: 0 auto !important;
+}
+
+.profile-placeholder img {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
+}
