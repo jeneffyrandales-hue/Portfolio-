@@ -49,3 +49,31 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.getElementById("year").textContent = new Date().getFullYear();
 });
+/* Reveal sections as visitors scroll */
+document.addEventListener("DOMContentLoaded", () => {
+  const sections = document.querySelectorAll("section");
+
+  if ("IntersectionObserver" in window) {
+    sections.forEach(section => {
+      section.classList.add("reveal-section");
+    });
+
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12 }
+    );
+
+    sections.forEach(section => observer.observe(section));
+  } else {
+    sections.forEach(section => {
+      section.classList.add("is-visible");
+    });
+  }
+});
