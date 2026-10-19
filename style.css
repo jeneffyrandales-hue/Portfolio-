@@ -448,4 +448,281 @@ button:hover {
 }
 
 
+/* =====================================
+   JENEFFYR — OCEAN DREAMS FINAL THEME
+   Add this at the VERY BOTTOM of style.css
+   ===================================== */
+
+:root {
+  --blue: #4b83b5;
+  --deep: #243e64;
+  --sky: #eaf5ff;
+  --pale: #f5f9ff;
+  --ice: #d8eaff;
+  --pink: #f8e5ed;
+  --shadow: 0 14px 36px rgba(49, 91, 133, 0.12);
+}
+
+/* Dreamy pastel background */
+body {
+  background:
+    radial-gradient(
+      circle at 5% 8%,
+      rgba(169, 214, 245, 0.42),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 95% 32%,
+      rgba(248, 200, 190, 0.28),
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 20% 75%,
+      rgba(184, 181, 232, 0.20),
+      transparent 28%
+    ),
+    #f9fbff;
+  background-attachment: fixed;
+}
+
+/* Elegant translucent navigation */
+.site-header {
+  background: rgba(249, 251, 255, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 4px 22px rgba(36, 62, 100, 0.04);
+}
+
+.nav a {
+  transition: color 0.25s ease;
+}
+
+.nav a:hover {
+  color: #b27b9d;
+}
+
+/* Sunset hero */
+.hero {
+  background:
+    radial-gradient(
+      ellipse at 80% 20%,
+      rgba(255, 225, 198, 0.45),
+      transparent 35%
+    ),
+    linear-gradient(
+      135deg,
+      #f8fbff,
+      #e5f2ff 55%,
+      #f9edf5
+    );
+}
+
+.hero-art {
+  isolation: isolate;
+  box-shadow: 0 24px 55px rgba(49, 91, 133, 0.16);
+}
+
+.sun {
+  animation: sunsetGlow 5s ease-in-out infinite;
+}
+
+.cloud-one {
+  animation: cloudDrift 10s ease-in-out infinite alternate;
+}
+
+.cloud-two {
+  animation: cloudDrift 13s ease-in-out infinite alternate-reverse;
+}
+
+.floating-star {
+  animation: starFloat 3.5s ease-in-out infinite;
+}
+
+.star-two {
+  animation-delay: 1.2s;
+}
+
+@keyframes sunsetGlow {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 35px #fff2cc;
+  }
+  50% {
+    transform: scale(1.06);
+    box-shadow: 0 0 65px #fff0cf;
+  }
+}
+
+@keyframes cloudDrift {
+  from { translate: -5px 0; }
+  to { translate: 12px 5px; }
+}
+
+@keyframes starFloat {
+  0%, 100% {
+    transform: translateY(0) rotate(0);
+  }
+  50% {
+    transform: translateY(-10px) rotate(8deg);
+  }
+}
+
+/* Headings and soft text colors */
+h1, h2, h3 {
+  color: #243e64;
+}
+
+h1 em {
+  color: #6598c6;
+}
+
+.eyebrow {
+  color: #668bb2;
+}
+
+/* Soft, polished cards */
+.mini-card,
+.skill-card,
+.profile-card,
+.favorite-card,
+.library-card,
+.goals-grid article,
+.letter-card,
+.poem-card,
+.contact-card a {
+  border: 1px solid rgba(185, 211, 237, 0.65);
+  box-shadow: 0 8px 28px rgba(49, 91, 133, 0.07);
+}
+
+.mini-card,
+.skill-card,
+.favorite-card,
+.library-card,
+.goals-grid article {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.mini-card:hover,
+.skill-card:hover,
+.favorite-card:hover,
+.library-card:hover,
+.goals-grid article:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 34px rgba(49, 91, 133, 0.13);
+}
+
+/* Real sunset pictures */
+.photo-card,
+.memory-card {
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid #e0eaf5;
+  box-shadow: 0 8px 24px rgba(49, 91, 133, 0.08);
+}
+
+.photo-card img {
+  transition: transform 0.6s ease;
+}
+
+.photo-card:hover img {
+  transform: scale(1.045);
+}
+
+.memory-photo {
+  transition: transform 0.45s ease;
+}
+
+.memory-card:hover .memory-photo {
+  transform: scale(1.04);
+}
+
+/* Blue and lavender section backgrounds */
+.tinted {
+  background: linear-gradient(
+    140deg,
+    rgba(232, 244, 255, 0.94),
+    rgba(245, 241, 255, 0.90)
+  );
+}
+
+.poetry-section {
+  background: linear-gradient(
+    135deg,
+    #f5f9ff,
+    #f2ebfa,
+    #fff2ef
+  );
+}
+
+.blue-note {
+  background: linear-gradient(
+    135deg,
+    #dceeff,
+    #e9e7fa,
+    #fce9ef
+  );
+}
+
+/* Smooth buttons */
+.button {
+  background: linear-gradient(135deg, #4b83b5, #6e8fc2);
+  box-shadow: 0 8px 22px rgba(75, 131, 181, 0.22);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(75, 131, 181, 0.30);
+}
+
+/* Reveal sections when scrolling */
+.reveal-section {
+  opacity: 0;
+  transform: translateY(22px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+}
+
+.reveal-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Keep effects comfortable on mobile */
+@media (max-width: 760px) {
+  body {
+    background-attachment: scroll;
+  }
+
+  .hero-art {
+    box-shadow: 0 14px 30px rgba(49, 91, 133, 0.12);
+  }
+
+  .photo-card:hover img,
+  .memory-card:hover .memory-photo {
+    transform: none;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+
+  .reveal-section {
+    opacity: 1;
+    transform: none;
+  }
+}
+
 
