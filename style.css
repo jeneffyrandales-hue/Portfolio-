@@ -125,3 +125,128 @@ blockquote { font-family: var(--serif); font-size: clamp(1.2rem, 2.4vw, 1.65rem)
   border-radius: 14px;
   display: block;
 }
+
+/* ==============================
+   JENEFFYR'S PORTFOLIO ANIMATIONS
+   ============================== */
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Intro animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Apply animation to main sections */
+section {
+  animation: fadeInUp 0.8s ease both;
+}
+
+/* Headings */
+h1, h2 {
+  animation: fadeInUp 0.9s ease both;
+}
+
+/* Buttons and category filters */
+button,
+.filter {
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+button:hover,
+.filter:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px #234f761f;
+}
+
+/* Memory cards */
+.memory-card {
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.memory-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 12px 25px #234f7620;
+}
+
+/* Memory images */
+.memory-photo {
+  transition: transform 0.4s ease;
+}
+
+.memory-card:hover .memory-photo {
+  transform: scale(1.04);
+}
+
+/* Sky and sunset images */
+#sky img {
+  transition:
+    transform 0.5s ease,
+    filter 0.5s ease;
+}
+
+#sky img:hover {
+  transform: scale(1.02);
+  filter: saturate(1.15);
+}
+
+/* Floating decorative sparkle */
+@keyframes floatSparkle {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.eyebrow {
+  animation: floatSparkle 3s ease-in-out infinite;
+}
+
+/* Gentle glowing effect */
+@keyframes softGlow {
+  0%, 100% {
+    box-shadow: 0 0 0 #7db9e800;
+  }
+  50% {
+    box-shadow: 0 0 18px #7db9e855;
+  }
+}
+
+.memory-card:hover {
+  animation: softGlow 2s ease-in-out infinite;
+}
+
+/* Accessibility: respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
