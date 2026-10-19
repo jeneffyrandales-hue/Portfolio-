@@ -264,5 +264,188 @@ button:hover,
   transform: translateY(0);
 }
 
+/* ===================================
+   JENEFFYR'S DREAMY OCEAN THEME
+   Ocean blue + sunset pastel aesthetic
+   =================================== */
+
+:root {
+  --ocean: #376b98;
+  --deep-blue: #244866;
+  --sky-blue: #dceeff;
+  --soft-blue: #eff7ff;
+  --lavender: #eee8fa;
+  --sunset-pink: #fce8ed;
+  --text-color: #40566b;
+}
+
+/* Dreamy background */
+html {
+  scroll-behavior: smooth;
+  background-color: #f6f9ff;
+}
+
+body {
+  color: var(--text-color);
+  background:
+    radial-gradient(
+      ellipse at 10% 5%,
+      #dceeff 0%,
+      transparent 36%
+    ),
+    radial-gradient(
+      ellipse at 90% 30%,
+      #fce8ed 0%,
+      transparent 30%
+    ),
+    radial-gradient(
+      ellipse at 20% 70%,
+      #eee8fa 0%,
+      transparent 32%
+    ),
+    linear-gradient(
+      160deg,
+      #f8fbff 0%,
+      #f4f7ff 50%,
+      #fff8fa 100%
+    );
+  background-attachment: fixed;
+}
+
+/* Elegant headings */
+h1, h2, h3 {
+  color: var(--deep-blue);
+}
+
+h1 {
+  text-shadow: 0 3px 20px #8abde51c;
+}
+
+h2 {
+  text-decoration-color: #a8cdec;
+}
+
+/* Soft glass-style cards */
+article,
+.memory-card,
+.music-card,
+.memory-placeholder {
+  border-color: #dce7f2;
+}
+
+article,
+.memory-card,
+.music-card {
+  border-radius: 18px;
+  box-shadow: 0 5px 22px #375b8010;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+article:hover,
+.memory-card:hover,
+.music-card:hover {
+  transform: translateY(-4px);
+  border-color: #b4d2ed;
+  box-shadow: 0 12px 28px #375b801a;
+}
+
+/* Memory photo placeholders */
+.memory-placeholder {
+  background: linear-gradient(
+    135deg,
+    #e4efff,
+    #f2eaff,
+    #fce9ef
+  );
+  border-radius: 14px;
+}
+
+/* Real photos */
+.memory-photo {
+  border-radius: 14px;
+  box-shadow: 0 4px 14px #24486612;
+}
+
+/* Blue pill-style filters */
+button.filter,
+.filter {
+  border-radius: 999px;
+  transition: all 0.25s ease;
+}
+
+button.filter:hover,
+.filter:hover {
+  background: #e3efff;
+  color: var(--deep-blue);
+  transform: translateY(-2px);
+}
+
+/* Links */
+a {
+  color: var(--ocean);
+  transition: color 0.25s ease;
+}
+
+a:hover {
+  color: #8b6bb5;
+}
+
+/* Sky & sunset section */
+#sky {
+  position: relative;
+}
+
+#sky img {
+  border-radius: 18px;
+  box-shadow: 0 8px 25px #345b801a;
+}
+
+/* Gentle pastel highlight for quote */
+blockquote {
+  color: #58748e;
+  border-left: 3px solid #a9c9ee;
+  background: #ffffff80;
+  border-radius: 0 14px 14px 0;
+  padding: 18px;
+}
+
+/* Smooth buttons */
+button {
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+button:hover {
+  box-shadow: 0 5px 15px #376b981c;
+}
+
+/* Keep the design comfortable on phones */
+@media (max-width: 600px) {
+  body {
+    background-attachment: scroll;
+  }
+
+  article,
+  .memory-card,
+  .music-card {
+    border-radius: 15px;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
 
 
