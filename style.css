@@ -264,3 +264,22 @@ button:hover,
   transform: translateY(0);
 }
 
+.floating-heart {
+  position: fixed;
+  right: 18px;
+  bottom: 20px;
+  z-index: 10;
+  font-size: 25px;
+  pointer-events: none;
+  animation: heartFloat 3s ease-in-out infinite;
+}
+
+@keyframes heartFloat {
+  0%, 100% {
+    transform: translateY(0) rotate(-8deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(8deg);
+  }
+}
+
